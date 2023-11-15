@@ -1,0 +1,265 @@
+<!-- 
+    created by Rizal Aglal Faozi
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Hello composer, hi laravel!
+    </title>
+    <style>
+        html,
+        body {
+            min-width: 290px;
+            color: #4d4e53;
+            background-color: #ffffff;
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        /* 
+        #navbar {
+            position: fixed;
+            min-width: 290px;
+            top: 0px;
+            left: 0px;
+            width: 300px;
+            height: 100%;
+            border-right: solid;
+            border-color: rgba(0, 22, 22, 0.4);
+        } */
+
+        header {
+            margin: 10px;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: bolder;
+            text-transform: uppercase;
+            background-color: #4d4e53;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        #main-doc header {
+            text-align: left;
+            margin: 0px;
+        }
+
+        /* 
+        #navbar ul {
+            height: 88%;
+            padding: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        #navbar li {
+            color: #4d4e53;
+            border-top: 1px solid;
+            list-style: none;
+            position: relative;
+            width: 100%;
+        }
+
+        #navbar a {
+            display: block;
+            padding: 10px 30px;
+            color: #4d4e53;
+            text-decoration: none;
+            cursor: pointer;
+        } */
+
+        #main-doc {
+            position: absolute;
+            margin: 0 auto;
+            padding: 20px 100px;
+            margin-bottom: 110px;
+        }
+
+        section p {
+            color: #4d4e53;
+            margin: 15px;
+            font-size: 0.96em;
+        }
+
+        section li {
+            margin: 15px 0px 0px 20px;
+        }
+
+        code {
+            display: block;
+            text-align: left;
+            position: relative;
+            word-break: normal;
+            word-wrap: normal;
+            line-height: 1.5;
+            background-color: #252424;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+
+        @media only screen and (max-width: 815px) {
+
+            /* For mobile phones: */
+            #navbar ul {
+                border: 1px solid;
+                height: 207px;
+            }
+
+            #navbar {
+                background-color: white;
+                position: absolute;
+                top: 0;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                max-height: 275px;
+                border: none;
+                z-index: 1;
+                border-bottom: 2px solid;
+            }
+
+            #main-doc {
+                position: relative;
+                margin-left: 0px;
+                margin-top: 270px;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            #main-doc {
+                margin-left: -10px;
+            }
+
+            code {
+                margin-left: -20px;
+                width: 100%;
+                padding: 15px;
+                padding-left: 10px;
+                padding-right: 45px;
+                min-width: 233px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <nav id="navbar">
+        >
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduksi</a></li>
+        </ul>
+    </nav> -->
+    <main id="main-doc">
+        <header>Hello composer, hi laravel!</header> 
+        <section>
+        <h2>Pengantar Composer</h2>
+        <p>Composer adalah manajer depency untuk PHP yang memungkinkan pengelolaan paket dan library secara
+            efisien dalam proyek. Dengan Composer, Anda dapat:</p>
+        <ul>
+            <li>Menambahkan dan mengelola paket-paket PHP dalam proyek Anda.</li>
+            <li>Mendefinisikan ketergantungan dan versi paket yang dibutuhkan.</li>
+            <li>Memperbarui paket dengan mudah sesuai kebutuhan proyek.</li>
+            <li>Menggunakan autoloading untuk memuat class secara otomatis.</li>
+        </ul>
+        <p>Composer menggunakan file <code>composer.json</code> untuk mendefinisikan ketergantungan proyek PHP.
+            Dengan menggunakan perintah sederhana, Composer secara otomatis mengelola unduhan, instalasi, dan
+            penyesuaian paket-paket yang diperlukan.</p>
+        <p>Apabila Anda bekerja pada proyek PHP, memahami dan menggunakan Composer dapat mempermudah pengelolaan dan
+            pemeliharaan proyek secara keseluruhan.</p>
+        </section>
+        <section>
+            <h2>Instalasi dan Konfigurasi</h2>
+            <p style="background-color: #f04747; padding: 5px; color: black;">Untuk dapat menginstal composer pastikan
+                kamu telah menginstal php</p>
+            <p>cara ceknya adalah dengan membuka cmd/terminal, lalu ketikan perintah seperti berikut</p>
+            <code>php -v</code>
+            <p>berikut adalah output jika dalam komputer telah terinstal php</p>
+            <img src="img/0.png" width="90%">
+            <p>Langkah-langkah instalasi dan konfigurasi Composer:</p>
+            <ol>
+                <li>Buka halaman resmi composer, lalu pergi ke menu download, atau bisa langsung klik link berikut: <a
+                        href="http://getcomposer.org/download" target="_blank" rel="noopener noreferrer">download
+                        composer</a></li>
+                <figure><img src="img/1.png" width="100%"></figure>
+                <li>Spesial untuk windows instalasi composer bisa dilakukan dengan mendownload file exe. dengan cara
+                    meng-klik text yang pada gambar di atas dikotaki merah.</li>
+                <li>ketika file 'Composer-Setup.exe' telah selesai didownload, buka file tersebut.
+                    <ul>
+                        <li>Pertama ini adalah tampilan awal, direkomendasikan untuk memilih opsi 'install for all
+                            user'.
+                            <figure><img src="img/3.png"></figure>
+                        </li>
+                        <li>Kedua, unchecked developer mode , lalu klik next.
+                            <figure><img src="img/4.png" width="50%"></figure>
+                        </li>
+                        <li>Ketiga, masukkan path ke tempat kamu mengistal php, jika sudah klik next.
+                            <figure><img src="img/5.png" width="50%"></figure>
+                        </li>
+                        <li>Lalu, biarkan unchecked dan kosong, dan langsung klik next.
+                            <figure><img src="img/6.png" width="50%"></figure>
+                        </li>
+                        <li>Selanjutnya, jika semuanya sudah sesuai, klik install.
+                            <figure><img src="img/7.png" width="50%"></figure>
+                        </li>
+                        <li>Instalasi telah selesai.
+                            <figure><img src="img/8.png" width="50%"></figure>
+                        </li>
+                    </ul>
+                </li>
+                <li>Cara lain untuk instal composer adalah dengan "command-line installation" cara ini bisa dilakukan di
+                    cmd/terminal. copy text yang dikotaki merah pada gambar di bawah lalu paste-kan di terminal/cmd.
+                    <figure><img src="img/2.png" width="100%"></figure>
+                </li>
+                <li>Baik instalasi dengan cara pertama maupun cara kedua, untuk mengecek apakah composer telah terinstal di komputer kita atau belum caranya adalah dengan membuka cmd/terminal lalu ketikan perintah</li>
+                <code>composer -V</code>
+                <li>Seperti ini output jika composer telah terinstal
+                    <figure><img src="img/9.png" width="50%"></figure>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Instalasi laravel dengan composer</h2>
+            <p>Nah composer ini bisa digunakan untuk menginstal laravel. Apa itu laravel? Laravel adalah sebuah kerangka kerja (framework) PHP open-source yang menyediakan beragam modul dasar untuk meningkatkan performa PHP saat membangun aplikasi web. Karena PHP sendiri adalah bahasa pemrograman yang dinamis, penggunaan Laravel dapat mempercepat, memperkuat keamanan, dan menyederhanakan proses pengembangan web.</p>
+            <h3>Langkah-langkah laravel dengan composer</h3>
+            <ol>
+                <li>Buka cmd/terminal, lalu ketik: 
+                    <code>
+                        composer create-project laravel/laravel your-project-name
+                    </code>
+                    Nah, your-project-name bisa diganti sesuai keinginan, misalnya: 
+                    <code>
+                        composer create-project laravel/laravel myApp
+                    </code>
+                </li>
+                <li>
+                    Selanjutnya, tunggu hingga prosesnya selesai
+                    <figure><img src="img/10.png" width="50%"></figure>
+                    Jika berhasil, tampilannya akan seperti ini
+                    <figure><img src="img/11.png" width="50%"></figure>
+                </li>
+                <li>Setelah itu pindah folder, cara-nya 
+                    <code>cd your-project-name</code>
+                </li>
+                <li>
+                    Untuk menjalankan server ketikan
+                    <code>php artisan serve</code>
+                    outputnya seperti berikut
+                    <figure><img src="img/12.png" width="50%"></figure>
+                </li>
+                <li>
+                    Terakhir, untuk membuka servernya ketikan link https://127.0.0.1:8080/ di browser, dan tadaaaa...berhasil
+                    <figure><img src="img/13.png" width="50%"></figure>
+                </li>
+            </ol>
+        </section>
+        <footer style="text-align: center;">&copy;copyright 2023 | Rizal Aglal Faozi</footer>
+    </main>
+</body>
+
+</html>
